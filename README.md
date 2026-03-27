@@ -165,10 +165,12 @@ Auto-review Prompt System
 ---
 
 ## 🤝 Use cases
-ASR annotation teams
-QA reviewers
-AI evaluation pipelines
-Human-in-the-loop systems
+- ASR annotation teams  
+- QA reviewers  
+- AI evaluation pipelines  
+- Human-in-the-loop systems  
+
+---
 
 ---
 
