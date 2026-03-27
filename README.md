@@ -124,9 +124,13 @@ prioritize structure over fluency
 
 👉 Real cases from ASR rework logs:
 
-Example 01 — False Overlap Correction
-Example 02 — Unintelligible vs Deletion
-Example 03 — Speaker Resegmentation
+- [Example 01 — False Overlap Correction](./examples/example_01_false_overlap.md)
+- [Example 02 — Unintelligible vs Deletion](./examples/example_02_unintelligible.md)
+- [Example 03 — Speaker Resegmentation](./examples/example_03_speaker_split.md)
+
+These show how decisions are made in practice.
+
+---
 
 These show how decisions are made in practice.
 
