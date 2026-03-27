@@ -172,8 +172,6 @@ Auto-review Prompt System
 
 ---
 
----
-
 ## 📌 Author
 
 Built from real-world ASR evaluation work.
