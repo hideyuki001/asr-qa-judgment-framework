@@ -22,7 +22,7 @@ They follow reusable patterns:
 
 ## 🔁 Decision Flow (Simplified)
 
-
+```plaintext
 audio input
   ↓
 detect structure
@@ -40,8 +40,7 @@ check overlap
 check speaker
   ↓
 finalize
-
-
+```
 ---
 
 ## ⚠️ Risk Control
