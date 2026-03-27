@@ -110,6 +110,8 @@ check speaker
   ↓
 finalize
 ```
+---
+
 ## ⚠️ Risk Control
 Main failure risks:
 hallucination
@@ -119,6 +121,8 @@ Mitigation strategy:
 default to unintelligible
 avoid speculative completion
 prioritize structure over fluency
+
+---
 
 ## 📂 Examples
 
@@ -132,8 +136,6 @@ These show how decisions are made in practice.
 
 ---
 
-These show how decisions are made in practice.
-
 ## 🎯 Positioning
 
 This is not:
@@ -146,6 +148,8 @@ This is:
 
 👉 Not smarter — but more stable.
 
+---
+
 ## 🚀 Next
 
 This repository is a lightweight public version.
@@ -156,11 +160,15 @@ Complete Pattern Library
 QA Review Manual
 Auto-review Prompt System
 
+---
+
 ## 🤝 Use cases
 ASR annotation teams
 QA reviewers
 AI evaluation pipelines
 Human-in-the-loop systems
+
+---
 
 ## 📌 Author
 
