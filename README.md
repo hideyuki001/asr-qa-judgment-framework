@@ -91,6 +91,7 @@ This is:
 
 ✅ A reproducible ASR judgment system  
 
+👉 Not smarter — but more stable.
 ---
 
 ## 🚀 Next
