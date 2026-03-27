@@ -113,14 +113,16 @@ finalize
 ---
 
 ## ⚠️ Risk Control
-Main failure risks:
-hallucination
-false reconstruction
-incorrect speaker segmentation
-Mitigation strategy:
-default to unintelligible
-avoid speculative completion
-prioritize structure over fluency
+
+### Main failure risks:
+- hallucination  
+- false reconstruction  
+- incorrect speaker segmentation  
+
+### Mitigation strategy:
+- default to unintelligible  
+- avoid speculative completion  
+- prioritize structure over fluency  
 
 ---
 
