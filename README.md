@@ -109,7 +109,8 @@ check overlap
 check speaker
   ↓
 finalize
-⚠️ Risk Control
+```
+## ⚠️ Risk Control
 Main failure risks:
 hallucination
 false reconstruction
@@ -118,7 +119,8 @@ Mitigation strategy:
 default to unintelligible
 avoid speculative completion
 prioritize structure over fluency
-📂 Examples
+
+## 📂 Examples
 
 👉 Real cases from ASR rework logs:
 
@@ -128,7 +130,7 @@ Example 03 — Speaker Resegmentation
 
 These show how decisions are made in practice.
 
-🎯 Positioning
+## 🎯 Positioning
 
 This is not:
 
@@ -140,7 +142,7 @@ This is:
 
 👉 Not smarter — but more stable.
 
-🚀 Next
+## 🚀 Next
 
 This repository is a lightweight public version.
 
@@ -149,12 +151,14 @@ Full system includes:
 Complete Pattern Library
 QA Review Manual
 Auto-review Prompt System
-🤝 Use cases
+
+## 🤝 Use cases
 ASR annotation teams
 QA reviewers
 AI evaluation pipelines
 Human-in-the-loop systems
-📌 Author
+
+## 📌 Author
 
 Built from real-world ASR evaluation work.
 
