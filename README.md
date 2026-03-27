@@ -24,20 +24,21 @@ They follow reusable patterns:
 
 
 audio input
-↓
+  ↓
 detect structure
-↓
+  ↓
 is it meaningful?
-↓ yes → keep
-↓ no
-↓ needed for flow?
-↓ yes → unintelligible
-↓ no → delete
-↓
+  ├─ yes → keep
+  └─ no
+       ↓
+   needed for flow?
+     ├─ yes → unintelligible
+     └─ no  → delete
+  ↓
 check overlap
-↓
+  ↓
 check speaker
-↓
+  ↓
 finalize
 
 
