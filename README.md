@@ -45,6 +45,8 @@ This framework defines:
 - when to mark as unintelligible  
 - when to split speakers  
 
+👉 Decisions are not subjective — they are structured and reproducible.
+
 ---
 
 ## ⚙️ Core Principles
