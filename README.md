@@ -20,6 +20,18 @@ They follow reusable patterns:
 
 ---
 
+## 🧠 Decision Philosophy
+
+This system prioritizes:
+
+- structure over fluency  
+- evidence over assumption  
+- reproducibility over intuition  
+
+Every decision must be explainable and repeatable.
+
+---
+
 ## 🔁 Decision Flow (Simplified)
 
 ```plaintext
