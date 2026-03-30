@@ -1,5 +1,5 @@
-# ASR QA Judgment Framework
-### Reproducible Decision System for Transcription Quality
+# Reproducible ASR QA Framework  
+Reproducible Decision System for ASR Training Data Quality
 
 ---
 
@@ -7,18 +7,18 @@
 
 Most ASR failures are not caused by lack of intelligence.
 
-They come from **unstable judgment**.
+They are caused by **unstable judgment**.
 
-In real-world annotation work, different reviewers often make different decisions on:
+In real-world annotation work, different reviewers often make inconsistent decisions on:
 
-- unclear audio  
-- overlap handling  
-- speaker segmentation  
-- partial reconstruction  
+- unclear audio
+- overlap handling
+- speaker segmentation
+- partial reconstruction
 
-This framework was built to solve that.
+This leads to noisy training data and reduced model reliability.
 
-👉 The goal is simple:
+👉 The goal of this framework is simple:
 
 **Turn subjective decisions into a reproducible system.**
 
@@ -26,13 +26,13 @@ This framework was built to solve that.
 
 ## 🔧 What makes this different
 
-This is NOT a guideline based on theory.
+This is NOT a theory-based guideline.
 
 This system is built from:
 
-- Real ASR rework logs (rework19–35)  
-- Repeated error patterns  
-- Stable decision behaviors observed across tasks  
+- real ASR rework logs (rework19–35)
+- repeated error patterns
+- stable decision behaviors observed across tasks
 
 Instead of saying:
 
@@ -40,10 +40,10 @@ Instead of saying:
 
 This framework defines:
 
-- when to keep  
-- when to delete  
-- when to mark as unintelligible  
-- when to split speakers  
+- when to keep
+- when to delete
+- when to mark as `(unintelligible)`
+- when to split speakers
 
 👉 Decisions are not subjective — they are structured and reproducible.
 
@@ -52,14 +52,14 @@ This framework defines:
 ## ⚙️ Core Principles
 
 - audio > grammar  
-- uncertain → unintelligible  
+- uncertain → `(unintelligible)`  
 - overlap only if simultaneous  
 - no hallucination  
 - meaning-preserving deletion  
 
-These principles are consistently validated across all logs.
+**Key constraint:**
 
-They are derived from real-world ASR evaluation and rework processes.
+> If it cannot be reproduced from audio, it must not be included.
 
 ---
 
@@ -75,7 +75,7 @@ They follow reusable patterns:
 - Speaker Resegmentation  
 - Partial Reconstruction Guardrails  
 
-👉 This transforms QA into a **pattern-driven system**.
+👉 This transforms QA into a pattern-driven system.
 
 ---
 
@@ -87,56 +87,81 @@ This system prioritizes:
 - evidence over assumption  
 - reproducibility over intuition  
 
-Every decision must be explainable and repeatable.
+Every decision must be:
+
+- explainable  
+- repeatable  
+- verifiable from audio  
 
 ---
 
-## 🔁 Decision Flow (Simplified)
-
-```plaintext
+## 🔁 Decision Flow (Reproducible)
+'''
 audio input
-  ↓
-detect structure
-  ↓
-is it meaningful?
-  ├─ yes → keep
-  └─ no
-       ↓
-   needed for flow?
-     ├─ yes → unintelligible
-     └─ no  → delete
-  ↓
-check overlap
-  ↓
-check speaker
-  ↓
+↓
+can it be reproduced from audio?
+├─ yes → keep
+└─ no
+↓
+can structure be preserved?
+├─ yes → (unintelligible)
+└─ no → delete
+↓
+check overlap (simultaneous only)
+↓
+check speaker segmentation
+↓
 finalize
-```
+'''
+
+
+👉 No guessing. No completion. Only reproducible output.
+
 ---
 
 ## ⚠️ Risk Control
 
-### Main failure risks:
-- hallucination  
-- false reconstruction  
-- incorrect speaker segmentation  
+Main failure risks:
 
-### Mitigation strategy:
-- default to unintelligible  
-- avoid speculative completion  
+- hallucination  
+- speculative reconstruction  
+- incorrect overlap tagging  
+- speaker segmentation errors  
+
+Mitigation strategy:
+
+- default to `(unintelligible)`  
+- prohibit context-based completion  
 - prioritize structure over fluency  
+
+---
+
+## ⚠️ Scope
+
+This framework is designed for:
+
+- ASR training data QA  
+- model robustness improvement  
+
+It is NOT intended for:
+
+- subtitle generation  
+- user-facing content optimization  
+
+👉 Context-based completion may be acceptable in UX scenarios,  
+but is explicitly prohibited here.
 
 ---
 
 ## 📂 Examples
 
-👉 Real cases from ASR rework logs:
+Real cases from ASR rework logs:
 
-- [Example 01 — False Overlap Correction](./examples/example_01_false_overlap.md)
-- [Example 02 — Unintelligible vs Deletion](./examples/example_02_unintelligible.md)
-- [Example 03 — Speaker Resegmentation](./examples/example_03_speaker_split.md)
+- Example 01 — False Overlap Correction  
+- Example 02 — Unintelligible vs Deletion  
+- Example 03 — Speaker Resegmentation  
 
-These show how decisions are made in practice.
+These demonstrate how decisions are applied in practice.
 
 ---
 
@@ -144,11 +169,11 @@ These show how decisions are made in practice.
 
 This is not:
 
-❌ A collection of case logs
+❌ A collection of case logs  
 
 This is:
 
-✅ A reproducible ASR judgment system
+✅ A reproducible ASR judgment system  
 
 👉 Not smarter — but more stable.
 
@@ -158,28 +183,24 @@ This is:
 
 This repository is a lightweight public version.
 
-Full system includes:
+The full system includes:
 
-Complete Pattern Library
-QA Review Manual
-Auto-review Prompt System
+- complete pattern library  
+- QA review manual  
+- auto-review prompt system  
 
 ---
 
-## 🤝 Use cases
+## 🤝 Use Cases
+
 - ASR annotation teams  
 - QA reviewers  
 - AI evaluation pipelines  
-- Human-in-the-loop systems  
+- human-in-the-loop systems  
 
 ---
 
 ## 📌 Author
 
-Built from real-world ASR evaluation work.
-
-Focused on:
-
-decision stability
-reproducibility
-structured QA systems
+Hideyuki Okabe  
+AI Evaluation & QA Architect
