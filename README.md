@@ -96,24 +96,24 @@ Every decision must be:
 ---
 
 ## 🔁 Decision Flow (Reproducible)
-'''
+
+```text
 audio input
 ↓
 can it be reproduced from audio?
 ├─ yes → keep
 └─ no
-↓
-can structure be preserved?
-├─ yes → (unintelligible)
-└─ no → delete
+    ↓
+    can structure be preserved?
+    ├─ yes → (unintelligible)
+    └─ no  → delete
 ↓
 check overlap (simultaneous only)
 ↓
 check speaker segmentation
 ↓
 finalize
-'''
-
+```
 
 👉 No guessing. No completion. Only reproducible output.
 
